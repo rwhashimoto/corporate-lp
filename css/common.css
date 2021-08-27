@@ -332,7 +332,7 @@ a {
 .l-main p {
   background-color: red;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .l-main p {
     background-color: green;
   }
