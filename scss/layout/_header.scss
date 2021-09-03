@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 80px;
     background-color: $base-color;
     font-family: $font-family;
 
@@ -10,12 +9,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 0 0 7%;
+        margin: 0 90px;
         max-width: 480px;
         width: 100%;
+        height: 80px;
+        @include media-sp {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 15px;
+        }
     }
     &-logo {//.l-header-logo
         width: 100px;
+        @include media-sp {
+            width: 80px;
+        }
         img {
             width: 100%;
             height: auto;
@@ -23,29 +32,34 @@
     }
     &-items {//.l-header-items
         display: flex;
-        justify-content: space-between;
-        max-width: 320px;
-        width: 100%;
+        gap: 30px;
+        list-style: none;
     }
     &-item {//.l-header-item
-        padding: 0 30px 0 0;
-        list-style: none;
-        a {
-            text-decoration: none;
-            color: $main-color;
+        text-decoration: none;
+        color: $main-color;
+        @include media-pc {
+            transition: all ease-in-out 0.3s;
+            &:hover {
+                opacity: 0.7;
+            }
         }
     }
     &-request {//.l-header-request
-        padding: 31px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 200px;
+        height: 80px;
         background-color: $main-color;
         color: $sub-color;
         font-size: 1.2rem;
         text-decoration: none;
-        text-align: center;
-        transition: all ease-in-out 0.3s;
-        &:hover {
-            opacity: 0.7;
+        @include media-pc {
+            transition: all ease-in-out 0.3s;
+            &:hover {
+                opacity: 0.7;
+            }
         }
         @include media-sp {
             display: none;
