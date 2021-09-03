@@ -1,4 +1,5 @@
 .l-main {
+    background-color: $base-color;
     &-mv {//.l-main-mv
         max-width: 1920px;
         height: calc(100vh - 80px);
@@ -8,5 +9,33 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+    &-title {//.l-main-title
+        position: relative;
+        font-size: 3.6rem;
+        font-weight: normal;
+        .ja {
+            display: block;
+            font-size: 1.4rem;
+            padding: 0 0 36px;
+            @include media-sp {
+                padding: 0 0 24px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background-color: $main-color;
+        }
+    }
+    &-news {//.l-main-news
+        max-width: 1032px;
+        margin: 120px auto 0;
+        padding: 0 16px;
+
     }
 }
