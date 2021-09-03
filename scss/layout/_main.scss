@@ -14,6 +14,7 @@
         position: relative;
         font-size: 3.6rem;
         font-weight: normal;
+        margin: 0 0 50px;
         .ja {
             display: block;
             font-size: 1.4rem;
@@ -36,6 +37,64 @@
         max-width: 1032px;
         margin: 120px auto 0;
         padding: 0 16px;
+
+        .news-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            @include media-sp {
+                flex-direction: column;
+            }
+        }
+        .news-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 30%;
+            position: relative;
+            @include media-sp {
+                margin: 40px 0 0;
+                width: 100%;
+                &:first-of-type {
+                    margin: 0;
+                }
+            }
+            .date {
+                margin: 0 10px 0 0;
+                font-size: 1.4rem;
+            }
+            .category {
+                padding: 0 7px;
+                font-size: 1.2rem;
+                color: $sub-color;
+                background-color: $main-color;
+            }
+            .ttl {
+                margin: 16px 0 0 0;
+                font-size: 1.6rem;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: -20px;
+                width: 1px;
+                height: 78px;
+                background-color: $main-color;
+                @include media-sp {
+                    display: none;
+                }
+            }
+            &:first-child {
+                &::after {
+                    display: none;
+                }
+            }
+
+
+
+        }
+
 
     }
 }
