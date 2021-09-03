@@ -126,4 +126,34 @@
             }
         }
     }
+    &-business {//.l-main-business
+        max-width: 1032px;
+        margin: 120px auto 0;
+        padding: 0 16px;
+
+        .business-item {
+            width: 368px;
+            .ttl {
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding: 0 18px 0;
+                font-size: 1.4rem;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 8px;
+                    height: 1px;
+                    background: $main-color;
+                }
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    }
 }
