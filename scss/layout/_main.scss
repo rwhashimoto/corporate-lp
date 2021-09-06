@@ -136,6 +136,7 @@
         .business-content {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             max-width: 800px;
             margin: 0 auto;
             @include media-sp {
@@ -203,6 +204,7 @@
             max-width: 567px;
             width: 100%;
             @include media-sp {
+                max-width: 900px;
                 padding: 40px 20px;
             }
         }
@@ -213,14 +215,15 @@
                 flex-direction: column;
             }
             .ttl {
-                width: 84px;
                 margin: 10px 0 0;
+                width: 20%;
                 @include media-sp {
                     margin: 5px 0 0;
                 }
             }
             .detail {
                 margin: 10px 0 0;
+                width: 80%;
                 @include media-sp {
                     margin: 5px 0 0;
                 }
@@ -245,7 +248,7 @@
             }
         }
         .company-img {
-            width: 547px;
+            width: 54%;
             height: 400px;
             position: absolute;
             top: 115px;
