@@ -12,13 +12,15 @@
     }
     &-title {//.l-main-title
         position: relative;
+        margin: 0 0 60px;
         font-size: 3.6rem;
         font-weight: normal;
-        margin: 0 0 50px;
+        letter-spacing: 1rem;
         .ja {
             display: block;
+            padding: 10px 0 36px;
             font-size: 1.4rem;
-            padding: 0 0 36px;
+            letter-spacing: initial;
             @include media-sp {
                 padding: 0 0 24px;
             }
@@ -100,8 +102,8 @@
             margin: 90px 0 0;
             gap: 0;
         }
-        .about-image {
-            width: 54%;
+        .img-area {
+            width: 53%;
             height: 400px;
             @include media-sp {
                 width: 100%;
@@ -113,15 +115,18 @@
                 object-fit: cover;
             }
         }
-        .about-content {
-            margin: 190px 0 0;
-            width: 34%;
+        .text-area {
+            margin: 182px 0 0;
+            width: 25%;
             @include media-sp {
                 margin: 30px 0 0;
                 padding: 0 23px 0 16px;
                 width: 100%;
             }
-            .text {
+            .l-main-title {
+                margin: 0 0 45px;
+            }
+            .detail {
                 line-height: 3.0rem;
             }
         }
@@ -132,6 +137,9 @@
         padding: 0 16px;
         @include media-sp {
             margin: 74px auto 0;
+        }
+        .l-main-title {
+            margin: 0 0 50px;
         }
         .business-content {
             display: flex;
@@ -151,6 +159,11 @@
             }
         }
         .business-items.right{
+            padding: 0 0 100px;
+            @include media-sp {
+                padding: 0;
+                margin:  0;
+            }
             @include media-sp {
                 margin: 30px 0 0px;
             }
@@ -165,7 +178,7 @@
                 display: flex;
                 align-items: center;
                 position: relative;
-                margin: 0 0 10px;
+                margin: 0 0 15px;
                 padding: 0 18px 0;
                 font-size: 1.4rem;
                 &::before {
@@ -191,9 +204,9 @@
         }
     }
     &-company {//l-main-company
-        max-width: 1032px;
+        max-width: 1000px;
         margin: 120px auto 0;
-        padding: 0 16px 110px;
+        padding: 0 0 110px;
         position: relative;
         @include media-sp {
             margin: 80px auto 0;
@@ -201,11 +214,14 @@
         }
         .text-area {
             background-color: $sub-color;
-            padding: 100px 62px;
-            width: 57%;
+            padding: 100px 11.5% 100px 6%;
+            width: 56.7%;
             @include media-sp {
                 width: 100%;
                 padding: 40px 20px;
+            }
+            .l-main-title {
+                margin: 0 0 40px;
             }
             .information {
                 display: flex;
@@ -216,20 +232,20 @@
                 }
                 .ttl {
                     margin: 10px 0 0;
-                    width: 15%;
+                    width: 22%;
                     @include media-sp {
                         margin: 5px 0 0;
                     }
                 }
                 .detail {
                     margin: 10px 0 0;
-                    width: 80%;
-                    &:nth-of-type(n+6) {
-                        margin: 10px 0 0 15%;
+                    width: 78%;
+                    &:nth-of-type(n+7) {
+                        margin: 10px 0 0 22%;
                     }
                     @include media-sp {
                         margin: 5px 0 0;
-                        &:nth-of-type(n+6) {
+                        &:nth-of-type(n+7) {
                             margin: 5px 0 0;
                         }
                     }
@@ -237,11 +253,11 @@
             }
         }
         .img-area {
-            width: 55%;
+            width: 54.7%;
             height: 400px;
             position: absolute;
             top: 115px;
-            right: 16px;
+            right: 0;
             @include media-sp {
                 position: unset;
                 margin: 20px 0 0;
