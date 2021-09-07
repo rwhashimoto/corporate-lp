@@ -35,6 +35,9 @@
         display: flex;
         gap: 30px;
         list-style: none;
+        @include media-sp {
+            padding: 10px 0;
+        }
     }
     &-item {//.l-header-item
         text-decoration: none;
