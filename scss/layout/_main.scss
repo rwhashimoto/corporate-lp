@@ -192,66 +192,55 @@
     }
     &-company {//l-main-company
         max-width: 1032px;
-        margin: 0 auto;
-        padding: 120px 16px 110px;
+        margin: 120px auto 0;
+        padding: 0 16px 110px;
         position: relative;
         @include media-sp {
-            padding: 80px 16px 0;
+            margin: 80px auto 0;
+            padding: 0 16px 0;
         }
-        .company-items {
+        .text-area {
             background-color: $sub-color;
             padding: 100px 62px;
-            max-width: 567px;
-            width: 100%;
+            width: 57%;
             @include media-sp {
-                max-width: 900px;
+                width: 100%;
                 padding: 40px 20px;
             }
-        }
-        .company-item {
-            display: flex;
-            font-size: 1.4rem;
-            @include media-sp {
-                flex-direction: column;
-            }
-            .ttl {
-                margin: 10px 0 0;
-                width: 20%;
+            .information {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 1.4rem;
                 @include media-sp {
-                    margin: 5px 0 0;
+                    flex-direction: column;
                 }
-            }
-            .detail {
-                margin: 10px 0 0;
-                width: 80%;
-                @include media-sp {
-                    margin: 5px 0 0;
-                }
-                .service {
+                .ttl {
                     margin: 10px 0 0;
-                    list-style: none;
+                    width: 15%;
                     @include media-sp {
                         margin: 5px 0 0;
                     }
-                    &:first-of-type {
-                        margin: 0;
+                }
+                .detail {
+                    margin: 10px 0 0;
+                    width: 80%;
+                    &:nth-of-type(n+6) {
+                        margin: 10px 0 0 15%;
+                    }
+                    @include media-sp {
+                        margin: 5px 0 0;
+                        &:nth-of-type(n+6) {
+                            margin: 5px 0 0;
+                        }
                     }
                 }
             }
-            &:first-of-type {
-                .ttl {
-                    margin: 0;
-                }
-                .detail {
-                    margin: 0;
-                }
-            }
         }
-        .company-img {
-            width: 54%;
+        .img-area {
+            width: 55%;
             height: 400px;
             position: absolute;
-            top: 220px;
+            top: 115px;
             right: 16px;
             @include media-sp {
                 position: unset;
