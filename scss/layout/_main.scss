@@ -1,8 +1,268 @@
 .l-main {
-    p{
-        background-color: red;
-        @include media-sp{
-            background-color: green;
+    background-color: $base-color;
+    &-mv {//.l-main-mv
+        max-width: 1920px;
+        height: calc(100vh - 80px);
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-title {//.l-main-title
+        position: relative;
+        font-size: 3.6rem;
+        font-weight: normal;
+        margin: 0 0 50px;
+        .ja {
+            display: block;
+            font-size: 1.4rem;
+            padding: 0 0 36px;
+            @include media-sp {
+                padding: 0 0 24px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background-color: $main-color;
+        }
+    }
+    &-news {//.l-main-news
+        max-width: 1032px;
+        margin: 120px auto 0;
+        padding: 0 16px;
+        .news-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            @include media-sp {
+                flex-direction: column;
+            }
+        }
+        .news-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 30%;
+            position: relative;
+            @include media-sp {
+                margin: 40px 0 0;
+                width: 100%;
+                &:first-of-type {
+                    margin: 0;
+                }
+            }
+            .date {
+                margin: 0 10px 0 0;
+                font-size: 1.4rem;
+            }
+            .category {
+                padding: 0 7px;
+                font-size: 1.2rem;
+                color: $sub-color;
+                background-color: $main-color;
+            }
+            .ttl {
+                margin: 16px 0 0 0;
+                font-size: 1.6rem;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: -20px;
+                width: 1px;
+                height: 78px;
+                background-color: $main-color;
+                @include media-sp {
+                    display: none;
+                }
+            }
+            &:first-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-about {//.l-main-about
+        display: flex;
+        margin: 128px 0 0;
+        gap: 70px;
+        @include media-sp {
+            flex-direction: column;
+            margin: 90px 0 0;
+            gap: 0;
+        }
+        .about-image {
+            width: 54%;
+            height: 400px;
+            @include media-sp {
+                width: 100%;
+                height: 300px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .about-content {
+            margin: 190px 0 0;
+            width: 34%;
+            @include media-sp {
+                margin: 30px 0 0;
+                padding: 0 23px 0 16px;
+                width: 100%;
+            }
+            .text {
+                line-height: 3.0rem;
+            }
+        }
+    }
+    &-business {//.l-main-business
+        max-width: 1032px;
+        margin: 120px auto 0;
+        padding: 0 16px;
+        @include media-sp {
+            margin: 74px auto 0;
+        }
+        .business-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            @include media-sp {
+                flex-direction: column;
+            }
+        }
+        .business-items.left{
+            padding: 100px 0 0;
+            @include media-sp {
+                padding: 0;
+                margin:  0;
+            }
+        }
+        .business-items.right{
+            @include media-sp {
+                margin: 30px 0 0px;
+            }
+        }
+        .business-item {
+            max-width: 368px;
+            width: 100%;
+            @include media-sp {
+                max-width: 760px;
+            }
+            .ttl {
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin: 0 0 10px;
+                padding: 0 18px 0;
+                font-size: 1.4rem;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 8px;
+                    height: 1px;
+                    background: $main-color;
+                }
+            }
+            &:last-of-type {
+                margin: 50px 0 0px;
+                @include media-sp {
+                    margin: 30px 0 0px;
+                }
+            }
+            img {
+                width: 100%;
+                height: auto;
+                vertical-align: top;
+            }
+        }
+    }
+    &-company {//l-main-company
+        max-width: 1032px;
+        margin: 0 auto;
+        padding: 120px 16px 110px;
+        position: relative;
+        @include media-sp {
+            padding: 80px 16px 0;
+        }
+        .company-items {
+            background-color: $sub-color;
+            padding: 100px 62px;
+            max-width: 567px;
+            width: 100%;
+            @include media-sp {
+                max-width: 900px;
+                padding: 40px 20px;
+            }
+        }
+        .company-item {
+            display: flex;
+            font-size: 1.4rem;
+            @include media-sp {
+                flex-direction: column;
+            }
+            .ttl {
+                margin: 10px 0 0;
+                width: 20%;
+                @include media-sp {
+                    margin: 5px 0 0;
+                }
+            }
+            .detail {
+                margin: 10px 0 0;
+                width: 80%;
+                @include media-sp {
+                    margin: 5px 0 0;
+                }
+                .service {
+                    margin: 10px 0 0;
+                    list-style: none;
+                    @include media-sp {
+                        margin: 5px 0 0;
+                    }
+                    &:first-of-type {
+                        margin: 0;
+                    }
+                }
+            }
+            &:first-of-type {
+                .ttl {
+                    margin: 0;
+                }
+                .detail {
+                    margin: 0;
+                }
+            }
+        }
+        .company-img {
+            width: 54%;
+            height: 400px;
+            position: absolute;
+            top: 220px;
+            right: 16px;
+            @include media-sp {
+                position: unset;
+                margin: 20px 0 0;
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
