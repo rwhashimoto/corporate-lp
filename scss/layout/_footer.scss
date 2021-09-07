@@ -1,0 +1,38 @@
+.l-footer {
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 0 16px;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px 0 0;
+        @include media-sp {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .logo {
+            width: 100px;
+            @include media-sp {
+                width: 80px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .contact {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            @include media-sp {
+                margin: 10.5px 0 0;
+            }
+        }
+    }
+    &-copyright {
+        margin: 26px 0 20px;
+        @include media-sp {
+            margin: 40px 0 20px;
+        }
+    }
+}
