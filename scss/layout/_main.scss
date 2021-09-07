@@ -237,20 +237,22 @@
             .information {
                 display: flex;
                 flex-wrap: wrap;
-                margin: 40px 0 0;
+                margin: 50px 0 0;
                 font-size: 1.4rem;
                 @include media-sp {
                     flex-direction: column;
                     margin: 32px 0 0;
                 }
                 .ttl {
-                    margin: 10px 0 0;
                     width: 22%;
+                    margin: 10px 0 0;
                     &:first-of-type {
                         margin: 0;
                     }
                     &:nth-of-type(2) {
-                        margin: 20px 0 0;
+                        @include media-sp {
+                            margin: 20px 0 0;
+                        }
                     }
                 }
                 .detail {
@@ -259,6 +261,12 @@
                     @include media-sp {
                         width: 100%;
                         margin: 4px 0 0 14px;
+                    }
+                    &:first-of-type {
+                        margin: 0;
+                        @include media-sp {
+                            margin: 4px 0 0 14px;
+                        }
                     }
                     &:nth-of-type(n+7) {
                         margin: 10px 0 0 22%;

@@ -746,7 +746,7 @@ a {
 .l-main-company .text-area .information {
   display: flex;
   flex-wrap: wrap;
-  margin: 40px 0 0;
+  margin: 50px 0 0;
   font-size: 1.4rem;
 }
 @media screen and (max-width: 900px) {
@@ -756,14 +756,16 @@ a {
   }
 }
 .l-main-company .text-area .information .ttl {
-  margin: 10px 0 0;
   width: 22%;
+  margin: 10px 0 0;
 }
 .l-main-company .text-area .information .ttl:first-of-type {
   margin: 0;
 }
-.l-main-company .text-area .information .ttl:nth-of-type(2) {
-  margin: 20px 0 0;
+@media screen and (max-width: 900px) {
+  .l-main-company .text-area .information .ttl:nth-of-type(2) {
+    margin: 20px 0 0;
+  }
 }
 .l-main-company .text-area .information .detail {
   width: 78%;
@@ -772,6 +774,14 @@ a {
 @media screen and (max-width: 900px) {
   .l-main-company .text-area .information .detail {
     width: 100%;
+    margin: 4px 0 0 14px;
+  }
+}
+.l-main-company .text-area .information .detail:first-of-type {
+  margin: 0;
+}
+@media screen and (max-width: 900px) {
+  .l-main-company .text-area .information .detail:first-of-type {
     margin: 4px 0 0 14px;
   }
 }
