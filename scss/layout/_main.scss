@@ -192,11 +192,11 @@
     }
     &-company {//l-main-company
         max-width: 1032px;
-        margin: 120px auto 0;
-        padding: 0 16px;
+        margin: 0 auto;
+        padding: 120px 16px 110px;
         position: relative;
         @include media-sp {
-            margin: 80px auto 0;
+            padding: 80px 16px 0;
         }
         .company-items {
             background-color: $sub-color;
@@ -251,7 +251,7 @@
             width: 54%;
             height: 400px;
             position: absolute;
-            top: 115px;
+            top: 220px;
             right: 16px;
             @include media-sp {
                 position: unset;
