@@ -737,17 +737,18 @@ a {
   max-width: 1000px;
   margin: 120px auto 0;
   padding: 0 0 110px;
-  position: relative;
+  display: flex;
 }
 @media screen and (max-width: 900px) {
   .l-main-company {
+    flex-direction: column;
     margin: 80px auto 0;
     padding: 0 16px 0;
   }
 }
 .l-main-company .text-area {
   background-color: #FFF;
-  padding: 100px 11.5% 100px 6%;
+  padding: 100px 12% 100px 6%;
   width: 56.7%;
 }
 @media screen and (max-width: 900px) {
@@ -808,22 +809,30 @@ a {
   }
 }
 .l-main-company .img-area {
+  position: relative;
   width: 54.7%;
-  height: 400px;
-  position: absolute;
-  top: 115px;
-  right: 0;
+  margin: 115px 0 0 -12%;
+  padding-top: calc(64% - 115px);
 }
 @media screen and (max-width: 900px) {
   .l-main-company .img-area {
-    position: unset;
-    margin: 20px 0 0;
     width: 100%;
+    margin: 20px 0 0 0;
+    padding-top: calc(123% - 20px);
   }
 }
 .l-main-company .img-area img {
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 76.5%;
+}
+@media screen and (max-width: 900px) {
+  .l-main-company .img-area img {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=common.css.map */
