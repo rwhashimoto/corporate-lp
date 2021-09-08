@@ -55,10 +55,13 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            width: 27%;
+            width: calc(100% / 3);
             position: relative;
+            padding-left: 20px;
             @include media-sp {
                 width: 100%;
+                padding-left: 0px;
+                margin-top: 38px;
             }
             .date {
                 margin: 0 10px 0 0;
@@ -80,7 +83,7 @@
             &::after {
                 content: "";
                 position: absolute;
-                left: -20px;
+                left: 0px;
                 width: 1px;
                 height: 78px;
                 background-color: $main-color;
@@ -89,18 +92,12 @@
                 }
             }
             &:nth-child(1) {
-                margin: 0px 83px 0 0px;
+                padding-left: 0;
                 &::after {
                     display: none;
                 }
                 @include media-sp {
-                    margin: 0px 0 40px 0;
-                }
-            }
-            &:nth-child(2) {
-                margin: 0px 64px 0 0px;
-                @include media-sp {
-                    margin: 0px 0 40px 0;
+                    margin-top: 0px;
                 }
             }
         }
