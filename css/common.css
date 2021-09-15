@@ -327,7 +327,7 @@ html {
 p,
 a {
   font-size: 1.4rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 .l-header {
@@ -446,7 +446,7 @@ a {
 }
 .l-footer-content .contact {
   font-size: 1.4rem;
-  line-height: 2.1rem;
+  font-style: normal;
 }
 @media screen and (max-width: 900px) {
   .l-footer-content .contact {
@@ -624,7 +624,7 @@ a {
 }
 .l-main-about .text-area .detail {
   margin: 45px 0 0;
-  line-height: 3rem;
+  line-height: 2;
 }
 @media screen and (max-width: 900px) {
   .l-main-about .text-area .detail {
