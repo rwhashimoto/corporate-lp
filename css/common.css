@@ -610,6 +610,8 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 .l-main-about .text-area {
   margin: 182px 0 0;
@@ -703,12 +705,13 @@ a {
 }
 .l-main-business .business-item .image {
   max-width: 368px;
-  height: auto;
+  height: 232px;
 }
 .l-main-business .business-item .image img {
   width: 100%;
-  height: auto;
-  vertical-align: top;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media only screen and (max-width: 900px) and (min-width: 376px) {
   .l-main-business .business-item .image {
@@ -720,12 +723,6 @@ a {
   .l-main-business .business-item .image {
     width: 343px;
     height: 232px;
-  }
-  .l-main-business .business-item .image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 .l-main-company {
@@ -821,13 +818,13 @@ a {
   top: 0;
   width: 100%;
   height: 76.5%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 900px) {
   .l-main-company .img-area img {
     top: 0px;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }/*# sourceMappingURL=common.css.map */
