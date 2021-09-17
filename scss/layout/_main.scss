@@ -2,7 +2,7 @@
     background-color: $base-color;
     &-mv {//.l-main-mv
         max-width: 1920px;
-        height: calc(100vh - 80px);
+        height: 100vh;
         margin: 0 auto;
         img {
             width: 100%;

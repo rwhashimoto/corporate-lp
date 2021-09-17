@@ -330,12 +330,25 @@ a {
   line-height: 1.5;
 }
 
+.l-body {
+  position: relative;
+}
+
 .l-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #F0F0F0;
   font-family: "Meiryo", "メイリオ", sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all ease-in-out 0.5s;
+}
+.l-header.transform {
+  background-color: #FFF;
+  z-index: 10;
 }
 .l-header-content {
   display: flex;
@@ -468,7 +481,7 @@ a {
 }
 .l-main-mv {
   max-width: 1920px;
-  height: calc(100vh - 80px);
+  height: 100vh;
   margin: 0 auto;
 }
 .l-main-mv img {
